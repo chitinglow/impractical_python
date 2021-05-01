@@ -7,21 +7,23 @@ def main():
     print("Welcome to the Psych 'Sidekick Name Picker.'\n")
     print("A name just like Sean would pick for Gus:\n\n")
 
-    first = ('Baby Oil', 'Bad News', 'Big Burps', "Bill 'Beenie-Weenie'",
-             "Bob 'Stinkbug'", 'Bowel Noises', 'Boxelder', "Bud 'Lite'",
+    first = ( 'Bill', "Bob", 'Bowel Noises', 'Boxelder', "Bud 'Lite'",
              'Butterbean', 'Buttermilk', 'Buttocks', 'Chad', 'Chesterfield',
              'Chewy', 'Chigger', 'Cinnabuns', 'Cleet', 'Cornbread',
-             'Crab Meat', 'Crapps', 'Dark Skies', 'Dennis Clawhammer',
-             'Dicman', 'Elphonso', 'Fancypants', 'Figgs', 'Foncy', 'Gootsy',
-             'Greasy Jim', 'Huckleberry', 'Huggy', 'Ignatious', 'Jimbo',
-             "Joe 'Pottin Soil'", 'Johnny', 'Lemongrass', 'Lil Debil',
-             'Longbranch', '"Lunch Money"', 'Mergatroid', '"Mr Peabody"',
+              'Crapps', 'Dicman', 'Elphonso', 'Fancypants', 'Figgs', 'Foncy',
+              'Gootsy', 'Huckleberry', 'Huggy', 'Ignatious', 'Jimbo',
+             'Joe', 'Johnny', 'Lemongrass', 'Longbranch', 'Mergatroid',
              'Oil-Can', 'Oinks', 'Old Scratch', 'Ovaltine', 'Pennywhistle',
-             'Pitchfork Ben', 'Potato Bug', 'Pushmeet', 'Rock Candy',
-             'Schlomo', 'Scratchensniff', 'Scut', "Sid 'The Squirts'",
-             'Skidmark', 'Slaps', 'Snakes', 'Snoobs', 'Snorki', 'Soupcan Sam',
-             'Spitzitout', 'Squids', 'Stinky', 'Storyboard', 'Sweet Tea',
-             'TeeTee', 'Wheezy Joe', "Winston 'Jazz Hands'", 'Worms')
+              'Pushmeet', 'Schlomo', 'Scratchensniff', 'Scut', 'Sid',
+             'Skidmark', 'Slaps', 'Snakes', 'Snoobs', 'Snorki',
+             'Spitzitout', 'Squids', 'Stinky', 'Storyboard',
+             'TeeTee', 'Winston', 'Worms')
+
+    middle  = ('Pottin Soil', 'The Squirts', 'Oil Can', 'The Big News', 'Grunts', 'Tinkie Winkie', 'Baby Oil',
+               'Bad News', 'Big Burps', 'Beenie-Weenie', 'Stinkbug', 'Greasy Jim', 'Crab Meat',
+               'Dark Skies', 'Dennis Clawhammer', 'Lil Debil', 'Lunch Money', 'Mr Peabody',
+               'Pitchfork Ben', 'Potato Bug','Rock Candy', 'The Squirts',
+               'Soupcan Sam', 'Wheezy Joe','Sweet Tea', 'Jazz Hands')
 
     last = ('Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
             'Breedslovetrout', 'Butterbaugh', 'Clovenhoof', 'Clutterbuck',
@@ -41,9 +43,10 @@ def main():
     while True:
         first_name = random.choice(first)
         last_name = random.choice(last)
+        middle_name = random.choice(middle)
 
         print("\n\n")
-        print("{} {}".format(first_name, last_name), file=sys.stderr)
+        print("{} {} {}".format(first_name, middle_name ,last_name), file=sys.stderr)
         print("\n\n")
 
         try_again = input("\n\nTry again? (Press Enter else n to quit)\n ")
